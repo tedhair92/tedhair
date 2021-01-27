@@ -1,0 +1,172 @@
+{% load widget_tweaks %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet/less" type="text/css" href="{% static 'css/custom.less' %}"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <meta name="description"
+        content="TedHair is the #1 wholesale virgin hair &amp; hair extensions FACTORY, providing quality hair products to distributors, vendors, salons and stores around the world!">
+    <!-- Icons font CSS-->
+    <link href="{% static 'vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{% static 'vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/datepicker/daterangepicker.css' %}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" media="all">
+    <title>tedhairs</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <a style="text-decoration:none;color:#fff !important;" href="/start-hair-business">
+            <img src="{% static 'img/2020-XMAS_PC.jpg' %}" style="width: 100%;margin: 0;">
+        </a>
+    </div>
+    <br>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags %}
+    <script>alert("{{ message }}")</script>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Applicant Information</h2>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        {% if userform %}
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {%if userform.non_field_errors %}
+                            <div class="alert alert-danger" role="alert">
+                                {% for error in userform.non_field_errors %}
+                                {{ error }}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            <div class="form-row m-b-55">
+                                <div class="name">Name</div>
+                                <div class="value">
+                                    <div class="row row-space">
+                                        <div class="col-4">
+                                            <div class="input-group-desc">
+                                                {{ userform.FirstName.errors }}
+                                                {{ userform.FirstName }}
+                                                <!-- <label class="label--desc">First Name</label> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="input-group-desc">
+                                                {{ userform.MiddleName.errors }}
+                                                {{ userform.MiddleName }}
+                                                <!-- <label class="label--desc">Last Name</label> -->
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="input-group-desc">
+                                                {{ userform.LastName.errors }}
+                                                {{ userform.LastName }}
+                                                <!-- <label class="label--desc">Last Name</label> -->
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Date 0f Birth</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        {{ userform.DateOfBirth.errors }}
+                                        {{ userform.DateOfBirth }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Email</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        {{ userform.email.errors }}
+                                        {{ userform.email }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Phone Number</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        {{ userform.PhoneNumber.errors }}
+                                        {{ userform.PhoneNumber }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">SSN</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        {{ userform.ssn.errors }}
+                                        {{ userform.ssn }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Utility Bill</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        {{ userform.UtilityBill.errors }}
+                                        {{ userform.UtilityBill }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">DL Front Page</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        {{ userform.page1.errors }}
+                                        {{ userform.page1 }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">DL Front Page</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        {{ userform.page2.errors }}
+                                        {{ userform.page2 }}
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

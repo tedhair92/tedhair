@@ -1,0 +1,291 @@
+{% load widget_tweaks %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.tedhair.com/catalog/view/theme/default/image/favicon.ico"
+        type="image/x-icon">
+    <meta name="description"
+        content="TedHair is the #1 wholesale virgin hair &amp; hair extensions FACTORY, providing quality hair products to distributors, vendors, salons and stores around the world!">
+
+    <title>tedhair</title>
+</head>
+
+<body>
+    <div class="jwx_header">
+        <a style="text-decoration:none;color:#fff !important;" href="/start-hair-business">
+            <img src="{% static 'img/2020-XMAS_PC.jpg' %}" style="width: 100%;margin: 0;">
+        </a>
+        <div class="cont clearfix">
+            <!--<a href="#"><img class="left" alt="" src="https://www.tedhair.com/catalog/view/theme/default/image/j_1.jpg" /></a>-->
+
+            <a href="https://www.tedhair.com/"><img
+                    src="https://www.tedhair.com/catalog/view/theme/default/image/j_1.jpg" title="TEDHAIR" alt="TEDHAIR"
+                    class="left"></a>
+
+
+            <ul id="menu" class="nav navbar-nav left">
+                <li class="on"><a href="https://www.tedhair.com/">HOME</a></li>
+                <!--<li class="on">
+                    <a href="http://www.tedhair.cn/index.php?route=product/category&path=20">Virgin Hair</a>
+                </li>-->
+
+                <li class="dropdown ">
+                    <a href="/about-tedhair" class="dropdown-toggle">ABOUT</a>
+
+                    <div class="dragdowmBox" style="display: none;">
+                        <ul class="dragdowmMenu">
+                            <li class="dragdowmList">
+                                <ul class="dragdowmOptionBox">
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-company-overview">Company
+                                            Profile</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-company-capacity">Company
+                                            Capability</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-company-trustpass">TrustPass
+                                            Profile</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-company-faq">FAQ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="javascript:">PRODUCTS</a>
+
+                    <div class="dragdowmBox threeRow" style="display: none;">
+                        <ul class="dragdowmMenu">
+
+                            <li class="dragdowmList">
+                                <p class="dragdowmListTitle"><a
+                                        href="https://www.tedhair.com/wholesale-virgin-hair/">Virgin Hair</a></p>
+                                <ul class="dragdowmOptionBox">
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-brazilian-hair/">
+                                            Virgin Brazilian Hair (10) </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-malaysian-hair/">
+                                            Virgin Malaysian Hair (9) </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-indian-hair/">
+                                            Virgin Indian Hair (9) </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-peruvian-hair/">
+                                            Virgin Peruvian Hair (9) </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-hair-weave/">
+                                            Ombre Color Weave (14) </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/hair-sample/">
+                                            Hair Sample (11) </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-closures/">
+                                            Closures (22) </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-wigs/">
+                                            Wigs (41) </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dragdowmList">
+                                <p class="dragdowmListTitle"><a
+                                        href="https://www.tedhair.com/wholesale-hair-extensions/">Extensions</a></p>
+                                <ul class="dragdowmOptionBox">
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-clip-in-hair-extensions/">
+                                            Clip In Hair Extensions (22) </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-tape-in-hair-extensions/">
+                                            Tape In Hair Extensions (8) </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-pre-bonded-hair-extensions/">
+                                            Pre Bonded Hair Extensions (9) </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="https://www.tedhair.com/wholesale-weave/">
+                                            Colored Remy Weave (23) </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dragdowmList">
+                                <p class="dragdowmListTitle"><a href="/product-newarrival/">New Arrival</a></p>
+                                <ul class="dragdowmOptionBox">
+
+                                    <li class="dragdowmOption">
+                                        <a href="/hair-sample/">
+                                            Hair Sample </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="/hair-packaging/">
+                                            Packaging </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="/613-blonde-hair/">
+                                            613 Blonde </a>
+                                    </li>
+
+                                    <li class="dragdowmOption">
+                                        <a href="/wholesale-3d-mink-lashes/">
+                                            Eyelashes </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown ">
+                    <a href="/hair-sample/" class="dropdown-toggle">SAMPLE</a>
+
+                    <div class="dragdowmBox" style="display: none;">
+                        <ul class="dragdowmMenu">
+                            <li class="dragdowmList">
+                                <ul class="dragdowmOptionBox">
+                                    <li class="dragdowmOption"><a href="/hair-sample/" style="font-weight:700;">View
+                                            All</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="/20g-pc-5-textures-brazilian-virgin-hair-mini-sample-pack.html">$79
+                                            Sample</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="/12-14-16-brazilian-virgin-hair-body-wavy-3-bundles-sample.html">$99
+                                            Sample</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="/12-14-16-3-bundles-body-wavy-brazilian-virgin-hair-300g-with-10-4*4-body-wavy-free-part-closure.html">$119
+                                            Sample</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="12-14-16-3-bundles-body-wavy-brazilian-virgin-hair-300g-with-10-13*4-straight-free-part-closure.html">$149
+                                            Sample</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown ">
+                    <a href="/start-hair-business" class="dropdown-toggle" style="color:red">DEAL</a>
+                    <!-- <div class="dragdowmBox">
+                        <ul class="dragdowmMenu">
+                            <li class="dragdowmList">
+                                <ul class="dragdowmOptionBox">
+                                    <li class="dragdowmOption"><a href="/start-hair-business" style="font-weight:700;">View All</a></li>
+                                    <li class="dragdowmOption"><a href="/10-bundle-deal">10 BUNDLE DEAL</a></li>
+                                    <li class="dragdowmOption"><a href="/30-bundle-deal">30 BUNDLE DEAL</a></li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> -->
+                </li>
+
+                <li class="dropdown ">
+                    <a href="https://www.tedhair.com/information-service-wholesales" class="dropdown-toggle">MERCHANT
+                        SERVICE</a>
+
+                    <div class="dragdowmBox">
+                        <ul class="dragdowmMenu">
+                            <li class="dragdowmList">
+                                <ul class="dragdowmOptionBox">
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-service-wholesales">Wholesale</a>
+                                    </li>
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-service-salon">Sell from Your
+                                            Salon</a>
+                                    </li>
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-service-store">Sell from Your
+                                            Store</a>
+                                    </li>
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-service-online">Sell Online</a>
+                                    </li>
+                                    <li class="dragdowmOption"><a href="/customization">Packaging Customization</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="https://www.tedhair.com/information-contact">CONTACT</a></li>
+
+                <li class="dropdown ">
+                    <a href="javascript:void(0);">USA WAREHOUSE</a>
+
+                    <div class="dragdowmBox">
+                        <ul class="dragdowmMenu">
+                            <li class="dragdowmList">
+                                <ul class="dragdowmOptionBox">
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-atlanta-warehouse">ATLANTA
+                                            WAREHOUSE</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-losangeles-warehouse">LOS ANGELES
+                                            WAREHOUSE</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-miami-warehouse">MIAMI
+                                            WAREHOUSE</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-newjersey-warehouse">NEW JERSEY
+                                            WAREHOUSE</a></li>
+                                    <li class="dragdowmOption"><a
+                                            href="https://www.tedhair.com/information-houston-warehouse">HOUSTON
+                                            WAREHOUSE</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+
+            <div class="d1 right">
+                <span class="search_pop">
+                    <input id="header-search" value="" type="" name="new_search" placeholder="Search">
+                </span>
+
+                <a class="a2"></a>
+
+                <a href="https://www.tedhair.com/account-login" class="a1"></a>
+
+                <a href="https://www.tedhair.com/checkout-cart" class="a3"><span>0</span></a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
