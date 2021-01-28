@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 from decouple import config
 import django_heroku
+import dj_database_url
 
 
 # django_heroku.settings(locals())
@@ -27,12 +28,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p!6ih_@c=9^*1q43cdf14*0l2nsm_5(%qopn@#f9ut@i993ok2'
+# SECRET_KEY = 'p!6ih_@c=9^*1q43cdf14*0l2nsm_5(%qopn@#f9ut@i993ok2'
+SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default='FALSE')
 
-ALLOWED_HOSTS = ['tedhair.herokuapp.com']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[''])
 
 
 # Application definition
@@ -50,7 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # White Nose Setting
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',  # White Nose Setting
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -132,3 +134,9 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_URL = '/media/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# import dj_database_url
+# prod_db  =  dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(prod_db)
+django_heroku.settings(locals())
